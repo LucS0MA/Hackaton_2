@@ -5,7 +5,7 @@ import Dropdown from "./Dropdown";
 import SearchBar from "./SearchBar";
 import dfesign from "../assets/dfesign.png";
 
-function Navbar() {
+function Navbar({ setSelectedImageUrl }) {
   return (
     <>
       <div className="title">
@@ -15,7 +15,7 @@ function Navbar() {
       </div>
       <nav className="navbar">
         <Dropdown />
-        <SearchBar />
+        <SearchBar setSelectedImageUrl={setSelectedImageUrl} />
         <Link to="/panier">
           <img src="../src/assets/market_1.png" alt="Panier" />
         </Link>

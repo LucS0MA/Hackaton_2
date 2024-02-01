@@ -1,22 +1,29 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import "../style/SearchBar.css";
 
-const SearchBar = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+const SearchBar = ({ setSelectedImageUrl }) => {
   const [listVetement, setListVetement] = useState([]);
-  const [selectedImageUrl, setSelectedImageUrl] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:5000/data")
-      .then((response) => response.json())
-      .then((data) => setListVetement(data))
+    .then((response) => response.json())
+    .then((data) => {
+      const vetementsHomme = data.filter(
+        (vetement) => vetement.categorie === "Homme"
+      );
+      setListVetement(vetementsHomme);
+      const vetementsFemme = data.filter(
+        (vetement) => vetement.categorie === "Femme"
+      );
+      setListVetement(vetementsFemme);
+      const vetementsEnfant = data.filter(
+        (vetement) => vetement.categorie === "Enfant"
+      );
+      setListVetement(vetementsEnfant);
+    })
       .catch((error) => console.error('Error fetching data:', error));
-  }, []);
 
-  const handleChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+  }, []);
 
   const handleClick = (event) => {
     const selectedTitle = event.target.value;
@@ -25,14 +32,12 @@ const SearchBar = ({ onSearch }) => {
     );
     if (selectedItem) {
       const imageUrl = `http://localhost:5000${selectedItem.picture}`;
-   
-      setSelectedImageUrl(imageUrl);
+      setSelectedImageUrl(imageUrl); // Met à jour l'URL de l'image sélectionnée dans le composant parent
     }
-  
   };
 
   return (
-    <>
+    <div>
       <form>
         <select onChange={handleClick}>
           <option value="">Sélectionner un titre</option>
@@ -43,17 +48,12 @@ const SearchBar = ({ onSearch }) => {
           ))}
         </select>
       </form>
-      {selectedImageUrl && (
-        <div>
-          <img src={selectedImageUrl} alt="Image sélectionnée" />
-        </div>
-      )}
-    </>
+    </div>
   );
 };
 
 SearchBar.propTypes = {
-  onSearch: PropTypes.func.isRequired,
+  setSelectedImageUrl: PropTypes.func.isRequired,
 };
 
 export default SearchBar;
