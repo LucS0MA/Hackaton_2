@@ -1,10 +1,9 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import addShop from "../assets/add-shop.png";
 import "../style/ModalArticle.css";
 
 function ModalArticle({
-  isOpen,
   onClose,
   urlImage,
   title,
