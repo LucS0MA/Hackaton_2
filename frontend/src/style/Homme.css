@@ -1,8 +1,8 @@
-.conteneur-images {
+/* .conteneur-images {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-}
+} */
 
 .conteneur-images img {
   width: 100%; /* Les images remplissent la largeur de la cellule de la grille */
@@ -18,4 +18,8 @@
   max-height: 100%;
   height: auto;
   width: auto;
+}
+
+.article-item{
+
 }

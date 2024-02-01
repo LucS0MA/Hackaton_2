@@ -13,7 +13,9 @@ function Navbar() {
     <>
       <div className="title">
         <img src={dfesign} alt="" className="designBordure" />
+        <Link to="/">
         <h1 className="titre">VESTIS</h1>
+        </Link>
         <img src={dfesign1} alt="" className="designBordure" />
       </div>
       <nav className="navbar">
