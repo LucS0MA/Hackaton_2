@@ -27,7 +27,7 @@ function Footer() {
             </div>
             <div className="footer-title">
                 <h2>VESTIS SHOP</h2>
-                <p>- Tous droit réservés -</p>
+                <p>- Tous droits réservés -</p>
             </div>
         </section>
     );
