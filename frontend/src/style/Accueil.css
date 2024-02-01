@@ -1,0 +1,38 @@
+
+.accueil {
+    display: flex;
+    justify-content: center;
+
+}
+
+.grid {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+
+}
+
+.accueil-femme, .accueil-homme, .accueil-garçonfille {
+    width: 100%;
+    
+}
+
+.trois {
+    grid-column: span 2;
+}
+
+.categoriesAccueil {
+    position: relative;
+    font-family: "medusa";
+    font-size: 2.5rem;
+    bottom: 50%;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+}
+
+@font-face {
+    font-family: "medusa";
+    src: url("../fonts/MedusaGothic_D.otf");
+};

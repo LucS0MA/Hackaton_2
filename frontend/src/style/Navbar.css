@@ -8,9 +8,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: Title;
+  color: white;
 }
 .titre {
-  font-size: 5rem;
+  font-size: 3rem;
   margin: 0;
 }
 .designBordure {

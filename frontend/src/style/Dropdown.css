@@ -2,7 +2,9 @@
   position: relative;
   display: inline-block;
 }
-
+.bntDropDown {
+  background-color: #B6A697;
+}
 .menu {
   list-style-type: none;
   margin: 0;
@@ -14,10 +16,21 @@
   z-index: 1;
 }
 
+.menuPrincipal{
+  font-size: 3rem;
+}
+.menuPrincipal:hover{
+  color: #1E4F5E;
+}
+
 .liste a {
-  padding: 12px 16px;
+  padding: 30px 16px;
   text-decoration: none;
   display: block;
+  font-family: Title;
+  color: #B6A697;
+  background-color: #f9f9f9;
+  border: 3px solid;
 }
 
 .liste:hover {
@@ -46,9 +59,9 @@
 .menu .liste .sous-menu li a {
   text-decoration: none; /* Enlève les soulignements des liens */
   color: inherit; /* Optionnel : utilisez la couleur de texte héritée */
+  background-color: white;
 }
 
 .menu .liste:hover .sous-menu {
   display: block; /* Montrez le sous-menu au survol */
-  text-decoration: none;
 }

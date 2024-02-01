@@ -8,41 +8,53 @@ const Dropdown = () => {
 
   return (
     <div className="containt">
-      <button onClick={toggleDropdown}>
+      <button className="bntDropDown" onClick={toggleDropdown}>
         <img className="menuBurger" src={burgerBarImage} alt="Menu" />
       </button>
       {isOpen && (
         <ul className="menu">
           <li className="liste">
-            <Link to="/homme">Homme</Link>
+            <Link to="/homme" className="menuPrincipal">Homme</Link>
             <ul className="sous-menu">
               <li>
-                <Link to="/homme/souscategorie1">Sous-catégorie 1</Link>
+                <Link to="/homme/souscategorie1">Vetements</Link>
               </li>
               <li>
-                <Link to="/homme/souscategorie2">Sous-catégorie 2</Link>
+                <Link to="/homme/souscategorie2">Sandales</Link>
+              </li>
+              <li>
+                <Link to="/homme/souscategorie2">Accessoires</Link>
+              </li>
+              <li>
+                <Link to="/homme/souscategorie2">Armures</Link>
               </li>
             </ul>
           </li>
           <li className="liste">
-            <Link to="/femme">Femme</Link>
+            <Link to="/femme" className="menuPrincipal">Femme</Link>
             <ul className="sous-menu">
               <li>
-                <Link to="/femme/souscategorie1">Sous-catégorie 1</Link>
+                <Link to="/femme/souscategorie1">Vetements</Link>
               </li>
               <li>
-                <Link to="/femme/souscategorie2">Sous-catégorie 2</Link>
+                <Link to="/femme/souscategorie2">Sandales</Link>
+              </li>
+              <li>
+                <Link to="/femme/souscategorie2">Accessoires</Link>
+              </li>
+              <li>
+                <Link to="/femme/souscategorie2">Armures</Link>
               </li>
             </ul>
           </li>
           <li className="liste">
-            <Link to="/enfant">Enfant</Link>
+            <Link to="/enfant" className="menuPrincipal">Enfant</Link>
             <ul className="sous-menu">
               <li>
-                <Link to="/enfant/souscategorie1">Sous-catégorie 1</Link>
+                <Link to="/enfant/souscategorie1">Vetements</Link>
               </li>
               <li>
-                <Link to="/enfant/souscategorie2">Sous-catégorie 2</Link>
+                <Link to="/enfant/souscategorie2">Sandales</Link>
               </li>
             </ul>
           </li>

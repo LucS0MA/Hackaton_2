@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import SearchBar from "./SearchBar";
 import dfesign from "../assets/dfesign.png";
+import dfesign1 from "../assets/dfesign1.png";
 
 function Navbar() {
   return (
@@ -11,7 +12,7 @@ function Navbar() {
       <div className="title">
         <img src={dfesign} alt="" className="designBordure" />
         <h1 className="titre">VESTIS</h1>
-        <img src={dfesign} alt="" className="designBordure" />
+        <img src={dfesign1} alt="" className="designBordure" />
       </div>
       <nav className="navbar">
         <Dropdown />
