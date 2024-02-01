@@ -9,6 +9,7 @@
 }
 
 .Articles {
+  background-color: #d9d9d9;
   width: 65em;
   font-family: "Montserrat", sans-serif;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0);
@@ -68,7 +69,7 @@
   height: 32px;
   width: 30px;
   position: relative;
-  bottom: 10em;
+  bottom: 9em;
   background-color: white;
   color: black;
   transition: 0.3s;
@@ -86,11 +87,20 @@
 }
 
 .TotalContainer {
-  height: 30em;
+  background-color: #d9d9d9;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  padding-top: 3em;
+  margin: 3em;
+  font-weight: 800;
+  height: 10em;
   margin-top: 5em;
   text-align: center;
-  width: 30em;
-  border: 3px solid black;
+  width: 25em;
+}
+
+.TotalContainer:hover {
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
 }
 
 .NoArticles {
@@ -99,6 +109,7 @@
 }
 
 .BackToShop {
+  font-family: "Montserrat", sans-serif;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5em;
@@ -107,7 +118,7 @@
   font-size: 12px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
-  font-weight: 500;
+  font-weight: 900;
   color: #000;
   background-color: #fff;
   border: none;
@@ -120,12 +131,42 @@
 }
 
 .BackToShop:hover {
-  background-color: #1e4f5e;
-  box-shadow: 0px 15px 20px #b6a697(46, 229, 157, 0.4);
+  background-color: #8b7f73;
+  box-shadow: 0px 15px 20px black(46, 229, 157, 0.4);
   color: #fff;
   transform: translateY(-7px);
 }
 
 .BackToShop:active {
+  transform: translateY(-1px);
+}
+
+.Paiement {
+  font-family: "Montserrat", sans-serif;
+  margin: 3em;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 900;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  width: 10em;
+}
+
+.Paiement:hover {
+  background-color: #b6a697;
+  box-shadow: 0px 15px 20px #b6a697(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.Paiement:active {
   transform: translateY(-1px);
 }
