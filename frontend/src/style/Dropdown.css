@@ -3,7 +3,7 @@
   display: inline-block;
 }
 
-.Menu {
+.menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -14,7 +14,7 @@
   z-index: 1;
 }
 
-.Liste {
+.liste a {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -22,4 +22,33 @@
 
 .liste:hover {
   background-color: #f1f1f1;
+}
+.menuBurger {
+  width: 2rem;
+}
+.menu .liste {
+  position: relative;
+}
+
+.menu .liste .sous-menu {
+  display: none;
+  position: absolute;
+  left: 100%; /* Positionnez à droite de l'élément de liste */
+  top: 0;
+  /* Ajoutez d'autres styles ici (background, padding, etc.) */
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  text-decoration: none;
+  list-style-type: none;
+}
+.menu .liste .sous-menu li a {
+  text-decoration: none; /* Enlève les soulignements des liens */
+  color: inherit; /* Optionnel : utilisez la couleur de texte héritée */
+}
+
+.menu .liste:hover .sous-menu {
+  display: block; /* Montrez le sous-menu au survol */
+  text-decoration: none;
 }
