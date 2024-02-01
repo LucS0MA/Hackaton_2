@@ -6,6 +6,7 @@
   background-color: #b6a697;
   border: none;
   cursor: pointer;
+  margin-left: 1rem;
 }
 .menu {
   list-style-type: none;
