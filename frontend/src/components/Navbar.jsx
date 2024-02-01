@@ -7,8 +7,12 @@ import SearchBar from "./SearchBar";
 import dfesign from "../assets/dfesign.png";
 import dfesign1 from "../assets/dfesign1.png";
 
+<<<<<<< HEAD
+function Navbar({ setSelectedImageUrl }) {
+=======
 function Navbar() {
   const { cart } = useContext(ShopContext);
+>>>>>>> dev
   return (
     <>
       <div className="title">
@@ -18,7 +22,7 @@ function Navbar() {
       </div>
       <nav className="navbar">
         <Dropdown />
-        <SearchBar />
+        <SearchBar setSelectedImageUrl={setSelectedImageUrl} />
         <Link to="/panier">
           <img src="../src/assets/market_1.png" alt="Panier" />
           <div className="NmbrArticles">{cart.length}</div>
