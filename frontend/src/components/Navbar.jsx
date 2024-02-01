@@ -20,8 +20,14 @@ function Navbar() {
         <Dropdown />
         <SearchBar />
         <Link to="/panier">
-          <img src="../src/assets/market_1.png" alt="Panier" />
-          <div className="NmbrArticles">{cart.length}</div>
+          <img
+            src="../src/assets/panier1.png"
+            alt="Panier"
+            className="panierNav"
+          />
+          {cart.length > 0 ? (
+            <div className="NmbrArticles">{cart.length}</div>
+          ) : null}
         </Link>
       </nav>
     </>
