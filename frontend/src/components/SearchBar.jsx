@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import PropTypes from "prop-types";
+import "../style/SearchBar.css";
+import '../assets/search.png'
 
 const SearchBar = ({ setSelectedImageUrl }) => {
   const [listVetement, setListVetement] = useState([]);
@@ -49,6 +51,15 @@ const SearchBar = ({ setSelectedImageUrl }) => {
         </select>
       </form>
     </div>
+    // <form onSubmit={handleSubmit}>
+    //   <input
+    //     className="SearchBar"
+    //     type="text"
+    //     placeholder="Recherche..."
+    //     value={searchTerm}
+    //     onChange={handleChange}
+    //   />
+    // </form>
   );
 };
 

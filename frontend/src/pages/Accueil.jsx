@@ -5,7 +5,6 @@ function Accueil() {
        <>
        <NewsLetters />
        <HommeFemmeEnfant />
-       
        </>
     );
 }

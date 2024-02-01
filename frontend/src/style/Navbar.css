@@ -2,17 +2,33 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: Title;
+  color: white;
+  margin: 1.8rem 0;
 }
 .titre {
-  font-size: 5rem;
+  font-size: 3rem;
   margin: 0;
 }
 .designBordure {
   width: 20rem;
+}
+.NmbrArticles {
+  top: 11em;
+  text-align: center;
+  border-radius: 40px;
+  /* right: 2em; */
+  position: absolute;
+  z-index: 99;
+  padding: 0.5em;
+  width: 20px;
+  background-color: white;
+  color: black;
 }
