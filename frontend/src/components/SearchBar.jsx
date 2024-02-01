@@ -24,10 +24,8 @@ const SearchBar = ({ onSearch }) => {
       (item) => item.titre === selectedTitle
     );
     if (selectedItem) {
-      // Construisez l'URL complète en concaténant l'adresse de base avec l'URL relative de l'image
       const imageUrl = `http://localhost:5000${selectedItem.picture}`;
-    
-      // Mettez à jour l'URL de l'image sélectionnée dans l'état de votre composant
+   
       setSelectedImageUrl(imageUrl);
     }
   
@@ -45,7 +43,7 @@ const SearchBar = ({ onSearch }) => {
           ))}
         </select>
       </form>
-      {selectedImageUrl && ( // Afficher l'image si une URL est sélectionnée
+      {selectedImageUrl && (
         <div>
           <img src={selectedImageUrl} alt="Image sélectionnée" />
         </div>
