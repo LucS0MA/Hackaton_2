@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import CardArticle from "../components/CardArticle";
-import "../style/Homme.css";
+import "../style/Femme.css";
+import CardArticle  from "../components/CardArticle";
 
-const Homme = () => {
+const Femme = () => {
   const [articles, setArticles] = useState([]);
   const { souscategorie } = useParams();
 
@@ -11,7 +11,7 @@ const Homme = () => {
     fetch("http://localhost:5000/data")
       .then((response) => response.json())
       .then((data) => {
-        let filteredData = data.filter((item) => item.categorie === "Homme");
+        let filteredData = data.filter((item) => item.categorie === "Femme");
         if (souscategorie) {
           filteredData = filteredData.filter(
             (item) => item.souscategorie === souscategorie
@@ -24,9 +24,6 @@ const Homme = () => {
       );
   }, [souscategorie]);
 
-  // const openModal = () => setModalOpen(true);
-  // const closeModal = () => setModalOpen(false);
-
   return (
     <div className="conteneur-images">
       {articles.map((article) => (
@@ -38,4 +35,4 @@ const Homme = () => {
   );
 };
 
-export default Homme;
+export default Femme;

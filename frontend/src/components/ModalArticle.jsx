@@ -90,3 +90,13 @@ function ModalArticle() {
 }
 
 export default ModalArticle;
+
+// {modalOpen ? <ModalArticle
+//   urlImage={homme.picture}
+//   title={homme.titre}
+//   description={homme.description}
+//   price={homme.prix}
+//   reference={homme.reference}
+//   size={homme.taille}
+//   setModalDisplay={closeModal}
+// />}
