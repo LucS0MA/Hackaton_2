@@ -1,0 +1,18 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid white;
+}
+.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.titre {
+  font-size: 5rem;
+  margin: 0;
+}
+.designBordure {
+  width: 20rem;
+}
