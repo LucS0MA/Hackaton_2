@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import HommeFemmeEnfant from "../components/HommeFemmeEnfant";
 import NewsLetters from "../components/NewsLetters";
-import ModalArticle from "../components/ModalArticle";
 
 function Accueil() {
   const [listItems, getListItems] = useState([]);
@@ -18,7 +17,7 @@ function Accueil() {
     <>
       <NewsLetters />
       <HommeFemmeEnfant />
-      {listItems !== undefined ? (
+      {/* {listItems !== undefined ? (
         <ModalArticle
           urlImage={listItems[0].picture}
           title={listItems[0].titre}
@@ -29,7 +28,7 @@ function Accueil() {
         />
       ) : (
         <div>no data</div>
-      )}
+      )} */}
     </>
   );
 }

@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Homme from "./pages/Homme";
 import Accueil from "./pages/Accueil";
+import ModalArticle from "./components/ModalArticle";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/homme",
         element: <Homme />,
+      },
+      {
+        path: "/homme/modal",
+        element: <ModalArticle />,
       },
     ],
   },

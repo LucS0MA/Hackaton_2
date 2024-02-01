@@ -8,7 +8,7 @@ const Dropdown = () => {
 
   return (
     <div className="containt">
-      <button onClick={toggleDropdown}>
+      <button className="buttonBurger" onClick={toggleDropdown}>
         <img className="menuBurger" src={burgerBarImage} alt="Menu" />
       </button>
       {isOpen && (
