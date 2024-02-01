@@ -1,5 +1,9 @@
 body {
-  background-color: brown;
+  background-color: #B6A697;
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
 }
