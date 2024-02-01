@@ -60,7 +60,7 @@ function ModalArticle() {
             {/* <button className="addToFavorites" type="button">Ajouter dans les favoris</button> */}
           </div>
           <div className="quantitySelectModal">
-            <label htmlFor="size-seelct">Choisi ta taille :</label>
+            <label htmlFor="size-select">Choisi ta taille :</label>
             <select className="selectSize" name="sizes" id="size-select">
               {man.taille.map((size, index) => (
                 <option key={index} value={size}>
