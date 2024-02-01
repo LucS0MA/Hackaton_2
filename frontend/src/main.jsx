@@ -6,11 +6,16 @@ import App from "./App";
 import Homme from "./pages/Homme";
 import Femme from "./pages/Femme";
 import Enfant from "./pages/Enfant";
+import Accueil from "./pages/Accueil";
 
 const router = createBrowserRouter([
   {
     element: <App />,
     children: [
+      {
+        path: "/",
+        element: <Accueil />,
+      },
       {
         path: "/homme",
         element: <Homme />,
