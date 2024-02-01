@@ -1,12 +1,13 @@
-import HommeFemmeEnfant from "../components/HommeFemmeEnfant"
-import NewsLetters from "../components/NewsLetters"
+import HommeFemmeEnfant from "../components/HommeFemmeEnfant";
+import NewsLetters from "../components/NewsLetters";
+
 function Accueil() {
-    return(
-       <>
-       <NewsLetters />
-       <HommeFemmeEnfant />
-       </>
-    );
+  return (
+    <>
+      <NewsLetters />
+      <HommeFemmeEnfant />
+    </>
+  );
 }
 
 export default Accueil;

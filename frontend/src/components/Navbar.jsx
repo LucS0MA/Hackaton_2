@@ -1,4 +1,4 @@
-import "../style/Navbar.css";
+/* eslint-disable react/prop-types */
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { ShopContext } from "../context/shop-context";
@@ -6,13 +6,11 @@ import Dropdown from "./Dropdown";
 import SearchBar from "./SearchBar";
 import dfesign from "../assets/dfesign.png";
 import dfesign1 from "../assets/dfesign1.png";
+import "../style/Navbar.css";
 
-<<<<<<< HEAD
 function Navbar({ setSelectedImageUrl }) {
-=======
-function Navbar() {
   const { cart } = useContext(ShopContext);
->>>>>>> dev
+
   return (
     <>
       <div className="title">

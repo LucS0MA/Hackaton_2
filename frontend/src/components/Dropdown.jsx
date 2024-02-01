@@ -14,7 +14,9 @@ const Dropdown = () => {
       {isOpen && (
         <ul className="menu">
           <li className="liste">
-            <Link to="/homme" className="menuPrincipal">Homme</Link>
+            <Link to="/homme" className="menuPrincipal">
+              Homme
+            </Link>
             <ul className="sous-menu">
               <li>
                 <Link to="/homme/Vetements">Vetements</Link>
@@ -31,7 +33,9 @@ const Dropdown = () => {
             </ul>
           </li>
           <li className="liste">
-            <Link to="/femme" className="menuPrincipal">Femme</Link>
+            <Link to="/femme" className="menuPrincipal">
+              Femme
+            </Link>
             <ul className="sous-menu">
               <li>
                 <Link to="/femme/Vetements">Vetements</Link>
@@ -45,7 +49,9 @@ const Dropdown = () => {
             </ul>
           </li>
           <li className="liste">
-            <Link to="/enfant" className="menuPrincipal">Enfant</Link>
+            <Link to="/enfant" className="menuPrincipal">
+              Enfant
+            </Link>
             <ul className="sous-menu">
               <li>
                 <Link to="/enfant/souscategorie1">Vetements</Link>
