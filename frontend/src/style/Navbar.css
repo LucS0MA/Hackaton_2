@@ -2,7 +2,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid white;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
 }
 .title {
   display: flex;
@@ -10,6 +11,7 @@
   align-items: center;
   font-family: Title;
   color: white;
+  margin: 1.8rem 0;
 }
 .titre {
   font-size: 3rem;
