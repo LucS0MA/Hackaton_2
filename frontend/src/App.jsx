@@ -10,11 +10,13 @@ function App() {
   return (
     <>
       <Navbar />
+      
       <NewsLetters />
+      <Accueil />
       <main>
         <Outlet />
       </main>
-      <Accueil />
+      
 
     </>
   );

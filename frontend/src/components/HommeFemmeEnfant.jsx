@@ -11,19 +11,19 @@ function HommeFemmeEnfant() {
         <div className="accueil">
             <div className="grid">
                     <div className="un">
-            <Link to="">
+            <Link to="/femmes">
                 <img className="accueil-femme" src={Femmeaccueil} alt="image femme" />
             </Link>
             <h2 className="categoriesAccueil">FEMMES</h2>
         </div><div className="deux">
-                <Link to="">
+                <Link to="/homme">
                     <img className="accueil-homme" src={Hommeaccueil} alt="image homme" />
                 </Link>
                 <h2 className="categoriesAccueil">HOMMES</h2>
             </div>
 
                     <div className="trois">
-                        <Link to="">
+                        <Link to="/enfant">
                         <img className="accueil-garçonfille" src={GarçonFille} alt="image homme" />
                         </Link>
                         <h2 className="categoriesAccueil">ENFANT</h2>
