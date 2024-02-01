@@ -11,7 +11,7 @@ function HommeFemmeEnfant() {
         <div className="accueil">
             <div className="grid">
                     <div className="un">
-            <Link to="/femmes">
+            <Link to="/femme">
                 <img className="accueil-femme" src={Femmeaccueil} alt="image femme" />
             <h2 className="categoriesAccueil">FEMMES</h2>
             </Link>
