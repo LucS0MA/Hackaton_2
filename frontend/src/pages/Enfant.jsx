@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import "../style/Homme.css";
+import "../style/Enfant.css";
 
-const Homme = () => {
+const Enfant = () => {
   const [images, setImages] = useState([]);
   const { souscategorie } = useParams();
 
@@ -10,7 +10,7 @@ const Homme = () => {
     fetch("http://localhost:5000/data")
       .then((response) => response.json())
       .then((data) => {
-        let filteredData = data.filter((item) => item.categorie === "Homme");
+        let filteredData = data.filter((item) => item.categorie === "Enfant");
         if (souscategorie) {
           filteredData = filteredData.filter(
             (item) => item.souscategorie === souscategorie
@@ -37,4 +37,4 @@ const Homme = () => {
   );
 };
 
-export default Homme;
+export default Enfant;
