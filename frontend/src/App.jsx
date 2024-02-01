@@ -5,6 +5,7 @@ import "./App.css";
 import NewsLetters from "./components/NewsLetters";
 import Navbar from "./components/Navbar";
 import Accueil from "./pages/Accueil";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -16,8 +17,6 @@ function App() {
       <main>
         <Outlet />
       </main>
-      
-
     </>
   );
 }
