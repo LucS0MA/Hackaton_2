@@ -1,5 +1,6 @@
 
 .accueil {
+    margin-top: 3rem;
     display: flex;
     justify-content: center;
 
@@ -36,4 +37,3 @@
     font-family: "medusa";
     src: url("../fonts/MedusaGothic_D.otf");
 };
-
