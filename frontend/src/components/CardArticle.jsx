@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../style/CardArticle.scss";
 import CardImage from "../assets/OIG4.png";
 import { useState, useContext } from "react";

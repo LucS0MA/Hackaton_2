@@ -3,7 +3,10 @@
   display: inline-block;
 }
 .bntDropDown {
-  background-color: #B6A697;
+  background-color: #b6a697;
+  border: none;
+  cursor: pointer;
+  margin-left: 1rem;
 }
 .menu {
   list-style-type: none;
@@ -16,11 +19,11 @@
   z-index: 1;
 }
 
-.menuPrincipal{
+.menuPrincipal {
   font-size: 3rem;
 }
-.menuPrincipal:hover{
-  color: #1E4F5E;
+.menuPrincipal:hover {
+  color: #1e4f5e;
 }
 
 .liste a {
@@ -28,7 +31,7 @@
   text-decoration: none;
   display: block;
   font-family: Title;
-  color: #B6A697;
+  color: #b6a697;
   background-color: #f9f9f9;
   border: 3px solid;
 }

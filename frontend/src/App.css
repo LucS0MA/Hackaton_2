@@ -7,3 +7,19 @@ body {
 a {
   text-decoration: none;
 }
+
+.conteneur-images {
+  margin: 100px 0 100px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.conteneur-images img {
+  object-fit: cover;
+}
+.card-image {
+  filter: grayscale(2);
+}
+.card-image:hover {
+  filter: none;
+}
