@@ -7,6 +7,8 @@ import Homme from "./pages/Homme";
 import Femme from "./pages/Femme";
 import Enfant from "./pages/Enfant";
 import Accueil from "./pages/Accueil";
+import Cart from "./pages/Cart";
+import DisplayTest from "./components/DisplayTest";
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,14 @@ const router = createBrowserRouter([
             element: <Enfant />,
           },
         ],
+      },
+      {
+        path: "/Panier",
+        element: <Cart />,
+      },
+      {
+        path: "/DisplayTest",
+        element: <DisplayTest />,
       },
     ],
   },

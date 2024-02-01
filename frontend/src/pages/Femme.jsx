@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "../style/Femme.css";
-import CardArticle  from "../components/CardArticle";
+import CardArticle from "../components/CardArticle";
 
 const Femme = () => {
   const [articles, setArticles] = useState([]);
