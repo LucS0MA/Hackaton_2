@@ -17,10 +17,16 @@ const Dropdown = () => {
             <Link to="/homme">Homme</Link>
             <ul className="sous-menu">
               <li>
-                <Link to="/homme/souscategorie1">Sous-catégorie 1</Link>
+                <Link to="/homme/Vetements">Vetements</Link>
               </li>
               <li>
-                <Link to="/homme/souscategorie2">Sous-catégorie 2</Link>
+                <Link to="/homme/Chaussures">Chaussures</Link>
+              </li>
+              <li>
+                <Link to="/homme/Accessoires">Accessoires</Link>
+              </li>
+              <li>
+                <Link to="/homme/Armures">Armures</Link>
               </li>
             </ul>
           </li>
@@ -28,10 +34,13 @@ const Dropdown = () => {
             <Link to="/femme">Femme</Link>
             <ul className="sous-menu">
               <li>
-                <Link to="/femme/souscategorie1">Sous-catégorie 1</Link>
+                <Link to="/femme/Vetements">Vetements</Link>
               </li>
               <li>
-                <Link to="/femme/souscategorie2">Sous-catégorie 2</Link>
+                <Link to="/femme/Chaussures">Chaussures</Link>
+              </li>
+              <li>
+                <Link to="/femme/Accessoires">Accessoires</Link>
               </li>
             </ul>
           </li>
@@ -39,10 +48,10 @@ const Dropdown = () => {
             <Link to="/enfant">Enfant</Link>
             <ul className="sous-menu">
               <li>
-                <Link to="/enfant/souscategorie1">Sous-catégorie 1</Link>
+                <Link to="/enfant/Vetements">Vetements</Link>
               </li>
               <li>
-                <Link to="/enfant/souscategorie2">Sous-catégorie 2</Link>
+                <Link to="/enfant/Chaussures">Chaussures</Link>
               </li>
             </ul>
           </li>
