@@ -21,7 +21,7 @@ function CardArticle({ filteredData }) {
             <div className="card-informations">
                 <div className="card-text">
                     <h2 className="card-text-title">{filteredData.titre}</h2>
-                    <p className="card-text-price">{filteredData.prix}</p>
+                    <p className="card-text-price">{filteredData.prix} PO</p>
                 </div>
                 <img className="card-favorite" src={favorite} alt="" onClick={handleClickFavorite} />
             </div>
