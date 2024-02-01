@@ -21,7 +21,7 @@ function Navbar() {
         <SearchBar />
         <Link to="/panier">
           <img src="../src/assets/market_1.png" alt="Panier" />
-          <span>{cart.length}</span>
+          <div className="NmbrArticles">{cart.length}</div>
         </Link>
       </nav>
     </>

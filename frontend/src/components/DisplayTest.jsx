@@ -28,6 +28,7 @@ function DisplayTest() {
               />
               <p>{item.titre}</p>
               <button
+                className="ShopButton"
                 onClick={() => {
                   handleClickAdd(item);
                 }}
