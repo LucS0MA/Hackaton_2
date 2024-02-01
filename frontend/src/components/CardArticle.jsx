@@ -38,14 +38,14 @@ function CardArticle({ filteredData }) {
             onClick={handleClickFavorite}
           />
         </div>
-        <button
+        {/* <button
           className="card-cart"
           onClick={() => {
             handleClickAdd(filteredData);
           }}
         >
           Add To Cart
-        </button>
+        </button> */}
       </main>
     </section>
   );

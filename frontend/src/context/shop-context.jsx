@@ -17,7 +17,7 @@ export const ShopContextProvider = (props) => {
     const updatedCart = cart.map((product) => {
       if (item.id === product.id) {
         isPresent = true;
-        return { ...product, quantity: product.quantity + 1 };
+        return { ...product, quantity: product.quantity + item.quantity };
       }
       return product;
     });
@@ -25,7 +25,7 @@ export const ShopContextProvider = (props) => {
     if (isPresent) {
       setCart(updatedCart);
     } else {
-      setCart([...cart, { ...item, quantity: 1 }]);
+      setCart([...cart, { ...item }]);
     }
   };
 
@@ -36,7 +36,9 @@ export const ShopContextProvider = (props) => {
 
   const handleIncreaseQuantity = (itemId) => {
     const updatedCart = cart.map((item) =>
-      item.id === itemId ? { ...item, quantity: item.quantity + 1 } : item
+      item.id === itemId
+        ? { ...item, quantity: Number(item.quantity) + 1 }
+        : item
     );
     setCart(updatedCart);
   };

@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ShopContext } from "../context/shop-context";
 import addShop from "../assets/add-shop.png";
 import "../style/ModalArticle.css";
 
@@ -19,6 +20,7 @@ function ModalArticle({
     console.info(items);
     setItemsQuantity(items);
   };
+  const { handleClickAdd } = useContext(ShopContext);
 
   return (
     <div className="modalContainer">
@@ -62,7 +64,20 @@ function ModalArticle({
             min={1}
           />
           <button className="addShoppingCard" type="submit">
-            <img className="addShoppingCardImg" src={addShop} alt="" />
+            <img
+              className="addShoppingCardImg"
+              src={addShop}
+              alt=""
+              onClick={() => {
+                handleClickAdd({
+                  id: reference, // Utilisez la référence comme ID unique
+                  titre: title,
+                  prix: price,
+                  picture: urlImage,
+                  quantity: itemsQuantity,
+                });
+              }}
+            />
           </button>
         </div>
       </div>
