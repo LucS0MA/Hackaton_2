@@ -1,13 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import burgerBarImage from "../assets/burger-bar.png";
 import "../style/Dropdown.css";
+
 const Dropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
   const toggleDropdown = () => setIsOpen(!isOpen);
 
+  const handleClickOutside = (event) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleClickOutside);
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
-    <div className="containt">
+    <div className="containt" ref={dropdownRef}>
       <button className="bntDropDown" onClick={toggleDropdown}>
         <img className="menuBurger" src={burgerBarImage} alt="Menu" />
       </button>
@@ -22,7 +39,7 @@ const Dropdown = () => {
                 <Link to="/homme/Vetements">Vetements</Link>
               </li>
               <li>
-                <Link to="/homme/Chaussures">Sandales</Link>
+                <Link to="/homme/Chaussures">Chaussures</Link>
               </li>
               <li>
                 <Link to="/homme/Accessoires">Accessoires</Link>
@@ -41,7 +58,7 @@ const Dropdown = () => {
                 <Link to="/femme/Vetements">Vetements</Link>
               </li>
               <li>
-                <Link to="/femme/Chaussures">Sandales</Link>
+                <Link to="/femme/Chaussures">Chaussures</Link>
               </li>
               <li>
                 <Link to="/femme/Accessoires">Accessoires</Link>

@@ -1,14 +1,22 @@
 import "../style/NewsLetters.scss";
 import CloseNl from "../assets/closeNL.png";
 import imgNL from "../assets/imgNL.jpg";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function NewsLetters() {
   const [closeNewsLetter, setCloseNewsLetter] = useState(true);
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isInputEmpty, setIsInputEmpty] = useState(false);
 
+  useEffect(() => {
+    const isClosed = localStorage.getItem("newsletterClosed");
+    if (isClosed) {
+      setCloseNewsLetter(false);
+    }
+  }, []);
+
   const handleCloseNewsLetter = () => {
+    localStorage.setItem("newsletterClosed", "true");
     setCloseNewsLetter(false);
   };
 

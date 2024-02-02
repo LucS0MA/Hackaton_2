@@ -1,19 +1,19 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import CardArticle from "../components/CardArticle";
-import ModalArticle from "../components/ModalArticle";
+// import ModalArticle from "../components/ModalArticle";
 import "../style/Homme.css";
 
 const Homme = () => {
   const [articles, setArticles] = useState([]);
   const { souscategorie } = useParams();
-  const [modalOpen, setModalOpen] = useState(false);
-  const [urlImage, setUrlImage] = useState("");
-  const [title, setTitle] = useState("");
-  const [description, setDescription] = useState("");
-  const [price, setPrice] = useState("");
-  const [reference, setReference] = useState("");
-  const [sizes, setSize] = useState([]);
+  // const [modalOpen, setModalOpen] = useState(false);
+  // const [urlImage, setUrlImage] = useState("");
+  // const [title, setTitle] = useState("");
+  // const [description, setDescription] = useState("");
+  // const [price, setPrice] = useState("");
+  // const [reference, setReference] = useState("");
+  // const [sizes, setSize] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5000/data")
@@ -32,16 +32,16 @@ const Homme = () => {
       );
   }, [souscategorie]);
 
-  const handleClickArticle = (url, title, desc, price, ref, sizes) => {
-    setModalOpen(true);
-    setUrlImage(url);
-    setTitle(title);
-    setDescription(desc);
-    setPrice(price);
-    setReference(ref);
-    setSize(sizes);
-  };
-  console.info(urlImage);
+  // const handleClickArticle = (url, title, desc, price, ref, sizes) => {
+  //   setModalOpen(true);
+  //   setUrlImage(url);
+  //   setTitle(title);
+  //   setDescription(desc);
+  //   setPrice(price);
+  //   setReference(ref);
+  //   setSize(sizes);
+  // };
+  // console.info(urlImage);
   return (
     <>
       <div className="conteneur-images">
@@ -49,22 +49,22 @@ const Homme = () => {
           <div
             key={article.id}
             className="article-item"
-            onClick={() => {
-              handleClickArticle(
-                article.picture,
-                article.titre,
-                article.description,
-                article.prix,
-                article.reference,
-                article.taille
-              );
-            }}
+            // onClick={() => {
+            //   handleClickArticle(
+            //     article.picture,
+            //     article.titre,
+            //     article.description,
+            //     article.prix,
+            //     article.reference,
+            //     article.taille
+            //   );
+            // }}
           >
             <CardArticle filteredData={article} />
           </div>
         ))}
       </div>
-      {modalOpen && (
+      {/* {modalOpen && (
         <ModalArticle
           isOpen={modalOpen}
           onClose={() => setModalOpen(false)}
@@ -75,7 +75,7 @@ const Homme = () => {
           reference={reference}
           sizes={sizes}
         />
-      )}
+      )} */}
     </>
   );
 };
