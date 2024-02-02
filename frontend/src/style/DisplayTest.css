@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-}
+} */
 
 .conteneur-images img {
   width: 100%; 
