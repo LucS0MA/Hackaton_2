@@ -13,6 +13,8 @@ form {
   border: 1px solid #ccc;
   border-radius: 100px;
   background-color: #b6a697;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
 }
 
 /* .buttonBurger {
