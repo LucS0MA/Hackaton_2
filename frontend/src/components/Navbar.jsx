@@ -7,12 +7,8 @@ import SearchBar from "./SearchBar";
 import dfesign from "../assets/dfesign.png";
 import dfesign1 from "../assets/dfesign1.png";
 
-<<<<<<< HEAD
 function Navbar({ setSelectedImageUrl }) {
-=======
-function Navbar() {
   const { cart } = useContext(ShopContext);
->>>>>>> dev
   return (
     <>
       <div className="title">
