@@ -35,6 +35,17 @@
   color: black;
 }
 
+.nav-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.favoriteNav {
+  width: 50px;
+}
+
 .panierNav {
   width: 100px;
 }

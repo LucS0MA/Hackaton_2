@@ -4,6 +4,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App";
 import Homme from "./pages/Homme";
+import Favorites from "./pages/Favorites";
 import Femme from "./pages/Femme";
 import Enfant from "./pages/Enfant";
 import Accueil from "./pages/Accueil";
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
       {
         path: "/DisplayTest",
         element: <DisplayTest />,
+      },
+      {
+        path: "/Favorites",
+        element: <Favorites />,
       },
     ],
   },
