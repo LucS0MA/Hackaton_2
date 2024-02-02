@@ -19,18 +19,40 @@
     width: 100%;
     
 }
-
+.un, .deux {
+    margin-bottom: 10px;
+}
 .trois {
     grid-column: span 2;
 }
 
-.categoriesAccueil {
+.categoriesHomme {
+    position: absolute;
+    font-family: "medusa";
+    font-size: 2.5rem;
+    bottom: 20%;
+    left: 70%;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
+}
+
+.categoriesFemme {
+    position: absolute;
+    font-family: "medusa";
+    font-size: 2.5rem;
+    bottom: 20%;
+    left: 20%;
+    color: white;
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
+}
+
+.categoriesEnfant {
     position: relative;
     font-family: "medusa";
     font-size: 2.5rem;
     bottom: 50%;
     color: white;
-    text-shadow: rgba(0, 0, 0, 0.5) 0px 3px 8px;
+    text-shadow: rgba(0, 0, 0, 0.8) 0px 3px 8px;
 }
 
 @font-face {

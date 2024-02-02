@@ -1,15 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
-.CartBody {
-  font-family: "Montserrat", sans-serif;
+@font-face {
+  font-family: Title;
+  src: url("../assets/MedusaGothicD.ttf");
+}
+@font-face {
+  font-family: Texte;
+  src: url("../assets/Montserrat-VariableFont_wght.ttf");
 }
 
 .Pics {
-  width: 280px;
+  width: 250px;
 }
 
 .Articles {
-  background-color: #d9d9d9;
+  background-image: url("../assets/marble1.jpg");
   width: 65em;
   font-family: "Montserrat", sans-serif;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0);
@@ -17,7 +20,6 @@
   padding: 1em;
   display: flex;
   flex-direction: row;
-  /* gap: 1em; */
   margin: 5em 3em 5em;
   transition: 0.3s;
   align-items: center;
@@ -30,10 +32,12 @@
 
 .BigContainer {
   display: flex;
+  justify-content: space-evenly;
   gap: 1em;
 }
 
 .Titles {
+  font-family: Title;
   width: 370px;
   position: absolute;
   margin-left: 12em;
@@ -42,75 +46,88 @@
 }
 
 .Price {
+  font-weight: 500;
+  font-family: Texte;
   width: 150px;
   position: relative;
   font-size: 1.3em;
-  margin-left: 19em;
+  margin-left: -17em;
   margin-right: 0em;
 }
 
 .AddDel {
-  border-radius: 5px;
+  cursor: pointer;
+  border-radius: 40px;
   margin-left: 0.5em;
   text-align: center;
   height: 45px;
   width: 65px;
-  background-color: white;
-  color: black;
+  background-color: #b6a697;
+  color: white;
   font-size: 1.5em;
   transition: 0.3s;
   border: none;
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px 2px grey(0, 0, 0, 0.2);
 }
 
 .AddDel:hover {
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
-  scale: 1.1;
+  box-shadow: 2px 2px 10px 2px grey(0, 0, 0, 0.8);
+  transform: translateY(-3px);
+}
+
+.AddDel:active {
+  transform: translateY(-10px);
 }
 
 .X {
+  cursor: pointer;
   border-radius: 5px;
   border: none;
   font-size: 14px;
-  height: 32px;
-  width: 45px;
-  position: relative;
-  bottom: 9em;
-  background-color: white;
-  color: black;
+  height: 25px;
+  width: 25px;
   transition: 0.3s;
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .X:hover {
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
-  scale: 1.1;
+  scale: 1.05;
+}
+
+.ImageX {
+  gap: 47.5em;
+  display: flex;
 }
 
 .Quantity {
-  margin-right: 1em;
+  font-weight: 500;
+  font-family: Texte;
   font-size: 1.2em;
   width: 170px;
 }
 
 .TotalContainer {
-  background-color: #d9d9d9;
+  display: flex;
+  gap: 0.5em;
+  font-family: Texte;
+  background-color: rgb(243, 243, 243);
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0);
   border: 1px solid white;
   padding-top: 3em;
   margin: 3em;
-  font-weight: 800;
+  font-weight: 600;
   height: 10em;
   margin-top: 5em;
   text-align: center;
   width: 25em;
+  flex-direction: column;
+  align-items: center;
 }
-
 .TotalContainer:hover {
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
 }
 
 .NoArticles {
+  font-family: Title;
   margin: 5em;
   text-align: center;
 }
@@ -160,7 +177,7 @@
   background-color: #fff;
   border: none;
   border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 8px 30px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;
