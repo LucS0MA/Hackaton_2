@@ -12,13 +12,13 @@ form {
   border-radius: 5px;
   border: 1px solid #ccc;
   border-radius: 100px;
-  background-color: #B6A697;
+  background-color: #b6a697;
 }
 
-button {
+/* .buttonBurger {
   padding: 10px;
   border-radius: 5px;
   border: none;
   color: white;
   cursor: pointer;
-}
+} */

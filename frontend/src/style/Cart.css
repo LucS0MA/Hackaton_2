@@ -1,34 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+.CartBody {
+  font-family: "Montserrat", sans-serif;
+}
+
 .Pics {
-  width: 300px;
+  width: 280px;
 }
 
 .Articles {
+  background-color: #d9d9d9;
+  width: 65em;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  padding: 1em;
   display: flex;
   flex-direction: row;
-  gap: 1em;
+  /* gap: 1em; */
+  margin: 5em 3em 5em;
+  transition: 0.3s;
   align-items: center;
-  margin: 5em 15em 5em;
+  justify-content: flex-start;
+}
+
+.Articles:hover {
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
 }
 
 .BigContainer {
+  display: flex;
   gap: 1em;
 }
 
 .Titles {
+  width: 370px;
   position: absolute;
-  margin-left: 17.5em;
-  font-size: 2em;
+  margin-left: 12em;
+  margin-right: 1em;
+  font-size: 1.5em;
 }
 
 .Price {
+  width: 150px;
   position: relative;
-  font-size: 2em;
-  margin-left: 25em;
-  margin-right: 2em;
+  font-size: 1.3em;
+  margin-left: 19em;
+  margin-right: 0em;
 }
 
 .AddDel {
+  border-radius: 5px;
+  margin-left: 0.5em;
+  text-align: center;
+  height: 45px;
+  width: 65px;
   background-color: white;
   color: black;
+  font-size: 1.5em;
+  transition: 0.3s;
+  border: none;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.AddDel:hover {
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
+  scale: 1.1;
+}
+
+.X {
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+  height: 32px;
+  width: 45px;
+  position: relative;
+  bottom: 9em;
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.X:hover {
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
+  scale: 1.1;
+}
+
+.Quantity {
+  margin-right: 1em;
+  font-size: 1.2em;
+  width: 170px;
+}
+
+.TotalContainer {
+  background-color: #d9d9d9;
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  padding-top: 3em;
+  margin: 3em;
   font-weight: 800;
+  height: 10em;
+  margin-top: 5em;
+  text-align: center;
+  width: 25em;
+}
+
+.TotalContainer:hover {
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
+}
+
+.NoArticles {
+  margin: 5em;
+  text-align: center;
+}
+
+.BackToShop {
+  font-family: "Montserrat", sans-serif;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5em;
+  position: relative;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 900;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  width: 17.5em;
+}
+
+.BackToShop:hover {
+  background-color: #8b7f73;
+  box-shadow: 0px 15px 20px black(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.BackToShop:active {
+  transform: translateY(-1px);
+}
+
+.Paiement {
+  font-family: "Montserrat", sans-serif;
+  margin: 3em;
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 900;
+  color: #000;
+  background-color: #fff;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  width: 10em;
+}
+
+.Paiement:hover {
+  background-color: #b6a697;
+  box-shadow: 0px 15px 20px #b6a697(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-5px);
+}
+
+.Paiement:active {
+  transform: translateY(-1px);
 }

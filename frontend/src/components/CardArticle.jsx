@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import "../style/CardArticle.scss";
 import CardImage from "../assets/OIG4.png";
 import { useState, useContext } from "react";
@@ -37,14 +38,14 @@ function CardArticle({ filteredData }) {
             onClick={handleClickFavorite}
           />
         </div>
-        <button
+        {/* <button
           className="card-cart"
           onClick={() => {
             handleClickAdd(filteredData);
           }}
         >
           Add To Cart
-        </button>
+        </button> */}
       </main>
     </section>
   );

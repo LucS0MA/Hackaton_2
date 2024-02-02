@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@font-face {
+  font-family: "MedusaGothic";
+  src: url(../assets/MedusaGothic_D.otf) format("opentype");
+}
+
+.modalContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.modalCard {
+  position: absolute;
+  left: 35%;
+  top: 25%;
+  z-index: 100;
+  margin: 50px 0 50px 0;
+  padding: 50px 10px 50px 10px;
+  line-height: 1.5;
+  width: 30%;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid white;
+  background: #b6a697;
+}
+.buttonClose {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+.buttonClose button {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+.buttonClose button:hover {
+  text-decoration: underline;
+}
+.modalImgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modalImage {
+  width: 90%;
+}
+.infoModalContainer {
+  padding: 0 1rem 0 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.modalTitle {
+  font-family: "MedusaGothic";
+  padding: 1rem 0 1rem 0;
+}
+.modalDesc {
+  margin-bottom: 0.5rem;
+}
+.modalRef {
+  margin-bottom: 1rem;
+}
+.modalPrice {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.quantitySelectModal {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.quantityInput,
+.selectSize {
+  width: 3rem;
+  height: 33.58px;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  text-align: center;
+}
+
+.addShoppingCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+  border: none;
+  cursor: pointer;
+}
+.addShoppingCard:hover {
+  transform: scale(1.05);
+}
+.addShoppingCardImg {
+  border-radius: 0.5rem;
+  width: 35px;
+}
+.selectSize {
+  width: 3rem;
+}
