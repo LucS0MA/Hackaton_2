@@ -8,7 +8,6 @@ import Femme from "./pages/Femme";
 import Enfant from "./pages/Enfant";
 import Accueil from "./pages/Accueil";
 import Cart from "./pages/Cart";
-import DisplayTest from "./components/DisplayTest";
 
 const router = createBrowserRouter([
   {
@@ -51,10 +50,6 @@ const router = createBrowserRouter([
       {
         path: "/Panier",
         element: <Cart />,
-      },
-      {
-        path: "/DisplayTest",
-        element: <DisplayTest />,
       },
     ],
   },
