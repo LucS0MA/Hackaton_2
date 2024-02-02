@@ -40,21 +40,34 @@ a.titre:hover::after {
   width: 20rem;
 }
 .NmbrArticles {
-  right: 3em;
-  top: 12em;
-  text-align: center;
+  right: 2.2em;
+  top: 10.5em;
   border-radius: 40px;
   /* right: 2em; */
   position: absolute;
   z-index: 99;
   padding: 0.5em;
-  height: 15px;
-  width: 15px;
+  height: 10px;
+  width: 10px;
   background-color: white;
   color: black;
   font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-logos {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.favoriteNav {
+  width: 35px;
 }
 
 .panierNav {
-  width: 100px;
+  width: 70px;
 }
