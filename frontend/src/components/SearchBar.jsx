@@ -14,14 +14,6 @@ const SearchBar = ({ setSelectedImageUrl }) => {
         (vetement) => vetement.categorie === "Homme"
       );
       setListVetement(vetementsHomme);
-      const vetementsFemme = data.filter(
-        (vetement) => vetement.categorie === "Femme"
-      );
-      setListVetement(vetementsFemme);
-      const vetementsEnfant = data.filter(
-        (vetement) => vetement.categorie === "Enfant"
-      );
-      setListVetement(vetementsEnfant);
     })
       .catch((error) => console.error('Error fetching data:', error));
 
@@ -34,7 +26,7 @@ const SearchBar = ({ setSelectedImageUrl }) => {
     );
     if (selectedItem) {
       const imageUrl = `http://localhost:5000${selectedItem.picture}`;
-      setSelectedImageUrl(imageUrl); // Met à jour l'URL de l'image sélectionnée dans le composant parent
+      setSelectedImageUrl(imageUrl); 
     }
   };
 
