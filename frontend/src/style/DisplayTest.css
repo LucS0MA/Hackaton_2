@@ -5,8 +5,8 @@
 } */
 
 .conteneur-images img {
-  width: 100%; /* Les images remplissent la largeur de la cellule de la grille */
-  height: auto; /* Maintient le ratio de l'image */
+  width: 100%; 
+  height: auto;
   max-height: 500px;
 }
 
@@ -18,4 +18,4 @@
   max-height: 100%;
   height: auto;
   width: auto;
-}
+} */
