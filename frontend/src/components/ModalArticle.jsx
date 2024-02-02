@@ -87,11 +87,11 @@ function ModalArticle({
               alt=""
               onClick={() => {
                 handleClickAdd({
-                  id: reference, // Utilisez la référence comme ID unique
+                  id: reference,
                   titre: title,
                   prix: price,
                   picture: urlImage,
-                  quantity: itemsQuantity,
+                  quantity: Number(itemsQuantity),
                 });
               }}
             />
