@@ -1,9 +1,16 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const ShopContext = createContext(null);
 
 export const ShopContextProvider = (props) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    return storedCart;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const calculateTotalPrice = (cartItems) => {
     return cartItems.reduce(
