@@ -55,8 +55,10 @@ function Cart() {
             })}
           </div>
           <div className="TotalContainer">
-            <p className="TotalLabel">Prix total</p>
-            <p className="TotalAmount">{total} PO</p>
+            <div className="TotalTexts">
+              <p className="TotalLabel">Prix total</p>
+              <p className="TotalAmount">{total} PO</p>
+            </div>
             <button className="Paiement">Payer</button>
           </div>
         </div>
