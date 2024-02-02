@@ -13,7 +13,7 @@ function ModalArticle({
   reference,
   sizes,
 }) {
-  const [itemsQuantity, setItemsQuantity] = useState(0);
+  const [itemsQuantity, setItemsQuantity] = useState(1);
   console.info(urlImage);
   const handleInput = (event) => {
     const items = event.target.value;
@@ -44,7 +44,7 @@ function ModalArticle({
           {/* <button className="addToFavorites" type="button">Ajouter dans les favoris</button> */}
         </div>
         <div className="quantitySelectModal">
-          <label htmlFor="size-select">Choisi ta taille :</label>
+          <label htmlFor="size-select">Choisis ta taille :</label>
           <select className="selectSize" name="sizes" id="size-select">
             {sizes.map((size, index) => (
               <option key={index} value={size}>
@@ -70,7 +70,7 @@ function ModalArticle({
               alt=""
               onClick={() => {
                 handleClickAdd({
-                  id: reference, // Utilisez la référence comme ID unique
+                  id: reference,
                   titre: title,
                   prix: price,
                   picture: urlImage,

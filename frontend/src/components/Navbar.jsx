@@ -9,7 +9,7 @@ import dfesign1 from "../assets/dfesign1.png";
 import "../style/Navbar.css";
 
 function Navbar({ setSelectedImageUrl }) {
-  const { cart } = useContext(ShopContext);
+  const { cart, totalItems } = useContext(ShopContext);
 
   return (
     <>
@@ -28,7 +28,7 @@ function Navbar({ setSelectedImageUrl }) {
             className="panierNav"
           />
           {cart.length > 0 ? (
-            <div className="NmbrArticles">{cart.length}</div>
+            <div className="NmbrArticles">{totalItems}</div>
           ) : null}
         </Link>
       </nav>

@@ -1,15 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
-
-.CartBody {
-  font-family: "Montserrat", sans-serif;
+@font-face {
+  font-family: Title;
+  src: url("../assets/MedusaGothicD.ttf");
+}
+@font-face {
+  font-family: Texte;
+  src: url("../assets/Montserrat-VariableFont_wght.ttf");
 }
 
 .Pics {
-  width: 280px;
+  width: 250px;
 }
 
 .Articles {
-  background-color: #d9d9d9;
+  background-image: url("../assets/marble1.jpg");
   width: 65em;
   font-family: "Montserrat", sans-serif;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0);
@@ -17,7 +20,6 @@
   padding: 1em;
   display: flex;
   flex-direction: row;
-  /* gap: 1em; */
   margin: 5em 3em 5em;
   transition: 0.3s;
   align-items: center;
@@ -34,6 +36,7 @@
 }
 
 .Titles {
+  font-family: Title;
   width: 370px;
   position: absolute;
   margin-left: 12em;
@@ -42,21 +45,24 @@
 }
 
 .Price {
+  font-weight: 500;
+  font-family: Texte;
   width: 150px;
   position: relative;
   font-size: 1.3em;
-  margin-left: 19em;
+  margin-left: -17em;
   margin-right: 0em;
 }
 
 .AddDel {
+  cursor: pointer;
   border-radius: 5px;
   margin-left: 0.5em;
   text-align: center;
   height: 45px;
   width: 65px;
-  background-color: white;
-  color: black;
+  background-color: #b6a697;
+  color: white;
   font-size: 1.5em;
   transition: 0.3s;
   border: none;
@@ -69,15 +75,14 @@
 }
 
 .X {
+  cursor: pointer;
   border-radius: 5px;
   border: none;
   font-size: 14px;
   height: 32px;
-  width: 45px;
-  position: relative;
-  bottom: 9em;
-  background-color: white;
-  color: black;
+  width: 35px;
+  background-color: #b6a697;
+  color: white;
   transition: 0.3s;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
 }
@@ -87,19 +92,26 @@
   scale: 1.1;
 }
 
+.ImageX {
+  gap: 47em;
+  display: flex;
+}
+
 .Quantity {
-  margin-right: 1em;
+  font-weight: 500;
+  font-family: Texte;
   font-size: 1.2em;
   width: 170px;
 }
 
 .TotalContainer {
+  font-family: Texte;
   background-color: #d9d9d9;
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0);
   border: 1px solid white;
   padding-top: 3em;
   margin: 3em;
-  font-weight: 800;
+  font-weight: 600;
   height: 10em;
   margin-top: 5em;
   text-align: center;
@@ -111,6 +123,7 @@
 }
 
 .NoArticles {
+  font-family: Title;
   margin: 5em;
   text-align: center;
 }

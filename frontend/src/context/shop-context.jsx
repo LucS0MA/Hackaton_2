@@ -12,6 +12,10 @@ export const ShopContextProvider = (props) => {
     );
   };
 
+  const getTotalItems = (cartItems) => {
+    return cartItems.reduce((total, item) => total + item.quantity, 0);
+  };
+
   const handleClickAdd = (item) => {
     let isPresent = false;
     const updatedCart = cart.map((product) => {
@@ -59,6 +63,7 @@ export const ShopContextProvider = (props) => {
     handleClickRemove,
     handleIncreaseQuantity,
     handleDecreaseQuantity,
+    totalItems: getTotalItems(cart).toString(),
   };
 
   return (

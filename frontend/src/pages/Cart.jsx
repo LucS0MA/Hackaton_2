@@ -19,14 +19,22 @@ function Cart() {
             {cart.map((item) => {
               return (
                 <div className="Articles" key={item.id}>
-                  <img
-                    src={`http://localhost:5000${item.picture}`}
-                    alt={item.titre}
-                    className="Pics"
-                  />
+                  <div className="ImageX">
+                    <img
+                      src={`http://localhost:5000${item.picture}`}
+                      alt={item.titre}
+                      className="Pics"
+                    />
+                    <button
+                      className="X"
+                      onClick={() => handleClickRemove(item.id)}
+                    >
+                      X
+                    </button>
+                  </div>
                   <p className="Titles">{item.titre}</p>
                   <p className="Price">{item.prix * item.quantity} PO</p>
-                  <p className="Quantity">Quantity: {item.quantity}</p>
+                  <p className="Quantity">Quantité: {item.quantity}</p>
                   <button
                     className="AddDel"
                     onClick={() => handleIncreaseQuantity(item.id)}
@@ -41,21 +49,15 @@ function Cart() {
                   >
                     -
                   </button>
-                  <button
-                    className="X"
-                    onClick={() => handleClickRemove(item.id)}
-                  >
-                    X
-                  </button>
                 </div>
               );
             })}
           </div>
           <div className="TotalContainer">
-            <p className="TotalLabel">Total Price</p>
+            <p className="TotalLabel">Prix total</p>
             <span>:</span>
             <p className="TotalAmount">{total} PO</p>
-            <button className="Paiement">Pay</button>
+            <button className="Paiement">Payer</button>
           </div>
         </div>
       ) : (

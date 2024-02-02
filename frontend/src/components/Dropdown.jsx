@@ -54,10 +54,10 @@ const Dropdown = () => {
             </Link>
             <ul className="sous-menu">
               <li>
-                <Link to="/enfant/souscategorie1">Vetements</Link>
+                <Link to="/enfant/Vetements">Vetements</Link>
               </li>
               <li>
-                <Link to="/enfant/souscategorie2">Sandales</Link>
+                <Link to="/enfant/Chaussures">Sandales</Link>
               </li>
             </ul>
           </li>
