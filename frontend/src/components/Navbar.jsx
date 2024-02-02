@@ -14,8 +14,8 @@ function Navbar({ setSelectedImageUrl }) {
     <>
       <div className="title">
         <img src={dfesign} alt="" className="designBordure" />
-        <Link to="/">
-        <h1 className="titre">VESTIS</h1>
+        <Link className="titre" to="/">
+          <h1 className="titre">VESTIS</h1>
         </Link>
         <img src={dfesign1} alt="" className="designBordure" />
       </div>

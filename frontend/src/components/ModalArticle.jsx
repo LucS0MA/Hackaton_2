@@ -2,6 +2,7 @@
 import { useState, useContext } from "react";
 import { ShopContext } from "../context/shop-context";
 import addShop from "../assets/panier2.png";
+import CloseNl from "../assets/closeNL.png";
 import "../style/ModalArticle.css";
 
 function ModalArticle({
@@ -12,8 +13,10 @@ function ModalArticle({
   price,
   reference,
   sizes,
+  favorite,
+  onClickFavorite,
 }) {
-  const [itemsQuantity, setItemsQuantity] = useState(0);
+  const [itemsQuantity, setItemsQuantity] = useState(1);
   console.info(urlImage);
   const handleInput = (event) => {
     const items = event.target.value;
@@ -26,7 +29,14 @@ function ModalArticle({
     <div className="modalContainer">
       <div className="modalCard">
         <div className="buttonClose">
-          <button onClick={onClose}> Fermer </button>{" "}
+          <button onClick={onClose}>
+            {" "}
+            <img
+              className="close-buttonModal"
+              src={CloseNl}
+              alt="close-button"
+            />
+          </button>{" "}
         </div>
         <div className="modalImgContainer">
           <img
@@ -36,15 +46,22 @@ function ModalArticle({
           />
         </div>
         <div className="infoModalContainer">
-          <h2 className="modalTitle">{title}</h2>
+          <div className="modalTitleContainer">
+            <h2 className="modalTitle">{title}</h2>{" "}
+            <img
+              className="card-favorite"
+              src={favorite}
+              alt=""
+              onClick={onClickFavorite}
+            />
+          </div>
           <p className="modalDesc">{description}</p>
           <span className="modalRef"> Réf : {reference}</span>
           <span className="modalPrice"> Prix : {price} PO</span>
-
           {/* <button className="addToFavorites" type="button">Ajouter dans les favoris</button> */}
         </div>
         <div className="quantitySelectModal">
-          <label htmlFor="size-select">Choisi ta taille :</label>
+          <label htmlFor="size-select">Choisis ta taille :</label>
           <select className="selectSize" name="sizes" id="size-select">
             {sizes.map((size, index) => (
               <option key={index} value={size}>
