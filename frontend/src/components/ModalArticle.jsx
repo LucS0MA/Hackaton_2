@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState, useContext } from "react";
 import { ShopContext } from "../context/shop-context";
-import addShop from "../assets/add-shop.png";
+import addShop from "../assets/panier2.png";
 import "../style/ModalArticle.css";
 
 function ModalArticle({
