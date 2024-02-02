@@ -1,14 +1,12 @@
 /* eslint-disable react/prop-types */
-import { useState, useContext } from "react";
-import { ShopContext } from "../context/shop-context";
+import "../style/CardArticle.scss";
+import { useState, useEffect } from "react";
 import ModalArticle from "../components/ModalArticle";
-import CardImage from "../assets/OIG4.png";
 import heart from "../assets/heart.png";
 import heartFull from "../assets/heartFull.png";
 import "../style/CardArticle.scss";
 
 function CardArticle({ filteredData }) {
-  const { handleClickAdd } = useContext(ShopContext);
   const [favorite, setFavorite] = useState(heart);
   const [modalOpen, setModalOpen] = useState(false);
   const [urlImage, setUrlImage] = useState("");
@@ -17,12 +15,38 @@ function CardArticle({ filteredData }) {
   const [price, setPrice] = useState("");
   const [reference, setReference] = useState("");
   const [sizes, setSize] = useState([]);
-  const handleClickFavorite = () => {
-    if (favorite === heart) {
+
+  useEffect(() => {
+    const pouletFavData = localStorage.getItem("fav");
+    const datafav = JSON.parse(pouletFavData);
+
+    if (datafav && datafav.find((elem) => elem.id === filteredData.id)) {
       setFavorite(heartFull);
     } else {
       setFavorite(heart);
     }
+  }, [filteredData.id]);
+
+  const handleClickFavorite = (cardInfo) => {
+    let pouletFavData = localStorage.getItem("fav");
+    let datafav = JSON.parse(pouletFavData);
+    let tmp = [];
+
+    if (datafav) {
+      if (datafav.find((elem) => elem.id === cardInfo.id)) {
+        setFavorite(heart);
+        const dataFavFiltre = datafav.filter((elem) => elem.id !== cardInfo.id);
+        tmp = dataFavFiltre;
+      } else {
+        setFavorite(heartFull);
+        tmp = [...datafav, cardInfo];
+      }
+    } else {
+      setFavorite(heartFull);
+      tmp = [cardInfo];
+    }
+
+    localStorage.setItem("fav", JSON.stringify(tmp));
   };
   const handleClickArticle = (url, title, desc, price, ref, sizes) => {
     setModalOpen(true);
@@ -62,7 +86,7 @@ function CardArticle({ filteredData }) {
             className="card-favorite"
             src={favorite}
             alt=""
-            onClick={handleClickFavorite}
+            onClick={() => handleClickFavorite(filteredData)}
           />
           {modalOpen && (
             <ModalArticle
@@ -79,14 +103,6 @@ function CardArticle({ filteredData }) {
             />
           )}
         </div>
-        {/* <button
-          className="card-cart"
-          onClick={() => {
-            handleClickAdd(filteredData);
-          }}
-        >
-          Add To Cart
-        </button> */}
       </main>
     </section>
   );
