@@ -56,6 +56,7 @@ function CardArticle({ filteredData }) {
           <div className="card-text">
             <h2 className="card-text-title">{filteredData.titre}</h2>
             <p className="card-text-price">{filteredData.prix} PO</p>
+            <h1 className="titleVestisCard">VESTIS</h1>
           </div>
           <img
             className="card-favorite"

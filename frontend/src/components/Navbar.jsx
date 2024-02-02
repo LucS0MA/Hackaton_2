@@ -10,7 +10,6 @@ import "../style/Navbar.css";
 
 function Navbar({ setSelectedImageUrl }) {
   const { cart } = useContext(ShopContext);
-
   return (
     <>
       <div className="title">
