@@ -9,14 +9,16 @@ import dfesign1 from "../assets/dfesign1.png";
 import "../style/Navbar.css";
 import FavoriteLogo from "../assets/favoriteLogo.png";
 
-function Navbar({ setSelectedImageUrl }) {
-  const { cart } = useContext(ShopContext);
+function Navbar() {
+  const { cart, getTotalItems } = useContext(ShopContext);
 
   return (
     <>
       <div className="title">
         <img src={dfesign} alt="" className="designBordure" />
-        <h1 className="titre">VESTIS</h1>
+        <Link className="titre" to="/">
+          <h1 className="titre">VESTIS</h1>
+        </Link>
         <img src={dfesign1} alt="" className="designBordure" />
       </div>
       <nav className="navbar">
@@ -33,7 +35,7 @@ function Navbar({ setSelectedImageUrl }) {
             className="panierNav"
           />
           {cart.length > 0 ? (
-            <div className="NmbrArticles">{cart.length}</div>
+            <div className="NmbrArticles">{getTotalItems}</div>
           ) : null}
         </Link>
         </div>

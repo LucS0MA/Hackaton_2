@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ShopContext } from "../context/shop-context";
 import { Link } from "react-router-dom";
+import closed from "../assets/close.png";
 import "../style/Cart.css";
 
 function Cart() {
@@ -19,14 +20,22 @@ function Cart() {
             {cart.map((item) => {
               return (
                 <div className="Articles" key={item.id}>
-                  <img
-                    src={`http://localhost:5000${item.picture}`}
-                    alt={item.titre}
-                    className="Pics"
-                  />
+                  <div className="ImageX">
+                    <img
+                      src={`http://localhost:5000${item.picture}`}
+                      alt={item.titre}
+                      className="Pics"
+                    />
+                    <div
+                      className="X"
+                      onClick={() => handleClickRemove(item.id)}
+                    >
+                      <img src={closed} alt="" className="X" />
+                    </div>
+                  </div>
                   <p className="Titles">{item.titre}</p>
                   <p className="Price">{item.prix * item.quantity} PO</p>
-                  <p className="Quantity">Quantity: {item.quantity}</p>
+                  <p className="Quantity">Quantité: {item.quantity}</p>
                   <button
                     className="AddDel"
                     onClick={() => handleIncreaseQuantity(item.id)}
@@ -41,21 +50,16 @@ function Cart() {
                   >
                     -
                   </button>
-                  <button
-                    className="X"
-                    onClick={() => handleClickRemove(item.id)}
-                  >
-                    X
-                  </button>
                 </div>
               );
             })}
           </div>
           <div className="TotalContainer">
-            <p className="TotalLabel">Total Price</p>
-            <span>:</span>
-            <p className="TotalAmount">{total} PO</p>
-            <button className="Paiement">Pay</button>
+            <div className="TotalTexts">
+              <p className="TotalLabel">Prix total</p>
+              <p className="TotalAmount">{total} PO</p>
+            </div>
+            <button className="Paiement">Payer</button>
           </div>
         </div>
       ) : (

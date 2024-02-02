@@ -1,9 +1,16 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 
 export const ShopContext = createContext(null);
 
 export const ShopContextProvider = (props) => {
-  const [cart, setCart] = useState([]);
+  const [cart, setCart] = useState(() => {
+    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+    return storedCart;
+  });
+
+  useEffect(() => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }, [cart]);
 
   const calculateTotalPrice = (cartItems) => {
     return cartItems.reduce(
@@ -12,17 +19,19 @@ export const ShopContextProvider = (props) => {
     );
   };
 
-  const handleClickAdd = (item) => {
-    let isPresent = false;
-    const updatedCart = cart.map((product) => {
-      if (item.id === product.id) {
-        isPresent = true;
-        return { ...product, quantity: product.quantity + item.quantity };
-      }
-      return product;
-    });
+  const getTotalItems = (cartItems) => {
+    return cartItems.reduce((total, item) => total + item.quantity, 0);
+  };
 
-    if (isPresent) {
+  const handleClickAdd = (item) => {
+    const existingItem = cart.find((product) => item.id === product.id);
+
+    if (existingItem) {
+      const updatedCart = cart.map((product) =>
+        product.id === item.id
+          ? { ...product, quantity: product.quantity + item.quantity }
+          : product
+      );
       setCart(updatedCart);
     } else {
       setCart([...cart, { ...item }]);
@@ -59,6 +68,7 @@ export const ShopContextProvider = (props) => {
     handleClickRemove,
     handleIncreaseQuantity,
     handleDecreaseQuantity,
+    getTotalItems: getTotalItems(cart),
   };
 
   return (

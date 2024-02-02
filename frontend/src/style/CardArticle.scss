@@ -13,6 +13,7 @@
         justify-content: start;
         align-items: center;
         margin: 0.3rem;
+        cursor: pointer;
     
         .card-image {
             width: 100%;
@@ -53,6 +54,11 @@
         .card-cart:hover {
             box-shadow:2px 2px 10px 2px rgba(0,0,0,0.3) ;
             scale: 1.1;
+        }
+        .titleVestisCard{
+            font-family: Title;
+            margin-top: 40px;
+            margin-left: 100px;
         }
     }
 }
