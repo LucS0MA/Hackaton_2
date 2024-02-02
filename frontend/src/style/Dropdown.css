@@ -33,7 +33,7 @@
   font-family: Title;
   color: #b6a697;
   background-color: #f9f9f9;
-  border: 3px solid;
+  border: 1px solid #1e4f5e;
 }
 
 .liste:hover {
@@ -61,7 +61,7 @@
 }
 .menu .liste .sous-menu li a {
   text-decoration: none; /* Enlève les soulignements des liens */
-  color: inherit; /* Optionnel : utilisez la couleur de texte héritée */
+  color: #1e4f5e; /* Optionnel : utilisez la couleur de texte héritée */
   background-color: white;
 }
 
