@@ -17,6 +17,7 @@ function Cart() {
       {cart.length > 0 ? (
         <div className="BigContainer">
           <div className="EveryArticles">
+            <h1 className="TitleCart">VOTRE PANIER</h1>
             {cart.map((item) => {
               return (
                 <div className="Articles" key={item.id}>
@@ -56,7 +57,7 @@ function Cart() {
           </div>
           <div className="TotalContainer">
             <div className="TotalTexts">
-              <p className="TotalLabel">Prix total</p>
+              <p className="TotalLabel">Prix total:</p>
               <p className="TotalAmount">{total} PO</p>
             </div>
             <button className="Paiement">Payer</button>

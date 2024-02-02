@@ -80,21 +80,20 @@ function ModalArticle({
             max={10}
             min={1}
           />
-          <button className="addShoppingCard" type="submit">
-            <img
-              className="addShoppingCardImg"
-              src={addShop}
-              alt=""
-              onClick={() => {
-                handleClickAdd({
-                  id: reference,
-                  titre: title,
-                  prix: price,
-                  picture: urlImage,
-                  quantity: Number(itemsQuantity),
-                });
-              }}
-            />
+          <button
+            className="addShoppingCard"
+            type="submit"
+            onClick={() => {
+              handleClickAdd({
+                id: reference,
+                titre: title,
+                prix: price,
+                picture: urlImage,
+                quantity: Number(itemsQuantity),
+              });
+            }}
+          >
+            <img className="addShoppingCardImg" src={addShop} alt="" />
           </button>
         </div>
       </div>
