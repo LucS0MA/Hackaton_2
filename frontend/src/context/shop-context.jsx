@@ -17,16 +17,14 @@ export const ShopContextProvider = (props) => {
   };
 
   const handleClickAdd = (item) => {
-    let isPresent = false;
-    const updatedCart = cart.map((product) => {
-      if (item.id === product.id) {
-        isPresent = true;
-        return { ...product, quantity: product.quantity + item.quantity };
-      }
-      return product;
-    });
+    const existingItem = cart.find((product) => item.id === product.id);
 
-    if (isPresent) {
+    if (existingItem) {
+      const updatedCart = cart.map((product) =>
+        product.id === item.id
+          ? { ...product, quantity: product.quantity + item.quantity }
+          : product
+      );
       setCart(updatedCart);
     } else {
       setCart([...cart, { ...item }]);
@@ -63,7 +61,7 @@ export const ShopContextProvider = (props) => {
     handleClickRemove,
     handleIncreaseQuantity,
     handleDecreaseQuantity,
-    totalItems: getTotalItems(cart).toString(),
+    getTotalItems: getTotalItems(cart),
   };
 
   return (

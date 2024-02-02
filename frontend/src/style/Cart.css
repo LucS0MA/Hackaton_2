@@ -32,6 +32,7 @@
 
 .BigContainer {
   display: flex;
+  justify-content: space-evenly;
   gap: 1em;
 }
 
@@ -56,7 +57,7 @@
 
 .AddDel {
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 40px;
   margin-left: 0.5em;
   text-align: center;
   height: 45px;
@@ -66,12 +67,16 @@
   font-size: 1.5em;
   transition: 0.3s;
   border: none;
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 10px 2px grey(0, 0, 0, 0.2);
 }
 
 .AddDel:hover {
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
-  scale: 1.1;
+  box-shadow: 2px 2px 10px 2px grey(0, 0, 0, 0.8);
+  transform: translateY(-3px);
+}
+
+.AddDel:active {
+  transform: translateY(-10px);
 }
 
 .X {
@@ -79,21 +84,17 @@
   border-radius: 5px;
   border: none;
   font-size: 14px;
-  height: 32px;
-  width: 35px;
-  background-color: #b6a697;
-  color: white;
+  height: 25px;
+  width: 25px;
   transition: 0.3s;
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.2);
 }
 
 .X:hover {
-  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
-  scale: 1.1;
+  scale: 1.05;
 }
 
 .ImageX {
-  gap: 47em;
+  gap: 47.5em;
   display: flex;
 }
 
@@ -105,8 +106,10 @@
 }
 
 .TotalContainer {
+  display: flex;
+  gap: 0.5em;
   font-family: Texte;
-  background-color: #d9d9d9;
+  background-color: rgb(243, 243, 243);
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0);
   border: 1px solid white;
   padding-top: 3em;
@@ -116,8 +119,9 @@
   margin-top: 5em;
   text-align: center;
   width: 25em;
+  flex-direction: column;
+  align-items: center;
 }
-
 .TotalContainer:hover {
   box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
 }
@@ -173,7 +177,7 @@
   background-color: #fff;
   border: none;
   border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 4px 8px 30px rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease 0s;
   cursor: pointer;
   outline: none;

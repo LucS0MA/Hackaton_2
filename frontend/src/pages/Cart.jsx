@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ShopContext } from "../context/shop-context";
 import { Link } from "react-router-dom";
+import closed from "../assets/close.png";
 import "../style/Cart.css";
 
 function Cart() {
@@ -25,12 +26,12 @@ function Cart() {
                       alt={item.titre}
                       className="Pics"
                     />
-                    <button
+                    <div
                       className="X"
                       onClick={() => handleClickRemove(item.id)}
                     >
-                      X
-                    </button>
+                      <img src={closed} alt="" className="X" />
+                    </div>
                   </div>
                   <p className="Titles">{item.titre}</p>
                   <p className="Price">{item.prix * item.quantity} PO</p>
@@ -55,7 +56,6 @@ function Cart() {
           </div>
           <div className="TotalContainer">
             <p className="TotalLabel">Prix total</p>
-            <span>:</span>
             <p className="TotalAmount">{total} PO</p>
             <button className="Paiement">Payer</button>
           </div>

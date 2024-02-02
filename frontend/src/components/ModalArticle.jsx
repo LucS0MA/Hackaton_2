@@ -74,7 +74,7 @@ function ModalArticle({
                   titre: title,
                   prix: price,
                   picture: urlImage,
-                  quantity: itemsQuantity,
+                  quantity: Number(itemsQuantity),
                 });
               }}
             />
