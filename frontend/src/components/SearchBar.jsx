@@ -1,83 +1,63 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import "../style/SearchBar.css";
-import '../assets/search.png'
+import CardArticle from "./CardArticle";
 
-const SearchBar = ({ onSearch, setSelectedImageUrl }) => {
-  const [searchTerm, setSearchTerm] = useState("");
+function SearchBar({ onSelectCard }) {
+  const [value, setValue] = useState("");
   const [listVetement, setListVetement] = useState([]);
+  const [visibleCard, setVisibleCard] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:5000/data")
-    .then((response) => response.json())
-    .then((data) => setListVetement(data))
-    // .then((data) => {
-    //   const vetementsHomme = data.filter(
-    //     (vetement) => vetement.categorie === "Homme"
-    //   );
-    //   setListVetement(vetementsHomme);
-    // })
-      .catch((error) => console.error('Error fetching data:', error));
-
+      .then((res) => res.json())
+      .then((data) => setListVetement(data));
   }, []);
 
   const handleChange = (event) => {
-    setSearchTerm(event.target.value);
+    setValue(event.target.value);
   };
 
-  // const handleClick = (event) => {
-  //   const selectedTitle = event.target.value;
-  //   const selectedItem = listVetement.find(
-  //     (item) => item.titre === selectedTitle
-  //   );
-
-
-  //   if (selectedItem) {
-  //     const imageUrl = `http://localhost:5000${selectedItem.picture}`;
-  //     setSelectedImageUrl(imageUrl); 
-  //   }
-  // };
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const filteredResults = listVetement.filter((item) => {
-      return (
-        item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        item.reference.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    });
-    
-    onSearch(filteredResults);
+  const handleItemClick = (titre) => {
+    setValue(titre);
+    const selected = listVetement.find((item) => item.titre === titre);
+    setVisibleCard(selected);
+    onSelectCard(selected);
   };
 
   return (
-    
-      // <form>
-      //   <select onChange={handleClick}>
-      //     <option value="">Sélectionner un titre</option>
-      //     {listVetement.map((listVetements) => (
-      //       <option key={listVetements.id} value={listVetements.titre}>
-      //         {listVetements.titre}
-      //       </option>
-      //     ))}
-      //   </select>
-      // </form>
     <div>
-    <form onSubmit={handleSubmit}>
-       <input
-         className="SearchBar"
-         type="text"
-         placeholder="Recherche..."
-         value={searchTerm}
-         onChange={handleChange}
-       />
-     </form>
+      <div className="inputsearch">
+        <input
+          className="SearchBar"
+          type="text"
+          placeholder="Recherche..."
+          value={value}
+          onChange={handleChange}
+        />
+      </div>
+      <ul>
+        {value &&
+          listVetement
+            .filter((listVetements) =>
+              listVetements.titre.toLowerCase().includes(value.toLowerCase())
+            )
+            .map((listVetements) => (
+              <li
+                onClick={() => handleItemClick(listVetements.titre)}
+                key={listVetements.id}
+              >
+                {listVetements.titre}
+              </li>
+            ))}
+      </ul>
+
     </div>
   );
-};
+}
 
 SearchBar.propTypes = {
-  setSelectedImageUrl: PropTypes.func.isRequired,
+  onSelectCard: PropTypes.func.isRequired,
 };
 
 export default SearchBar;

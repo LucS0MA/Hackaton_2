@@ -9,7 +9,7 @@ import dfesign1 from "../assets/dfesign1.png";
 import "../style/Navbar.css";
 import FavoriteLogo from "../assets/favoriteLogo.png";
 
-function Navbar() {
+function Navbar({ onSelectCard }) { // Assurez-vous de déstructurer les props ici
   const { cart, getTotalItems } = useContext(ShopContext);
 
   return (
@@ -23,7 +23,7 @@ function Navbar() {
       </div>
       <nav className="navbar">
         <Dropdown />
-        <SearchBar setSelectedImageUrl={cart} />
+        <SearchBar onSelectCard={onSelectCard} />
         <div className="nav-logos">
           <Link to="/favorites">
           <img src={FavoriteLogo} alt="favorite logo" className="favoriteNav"/>
